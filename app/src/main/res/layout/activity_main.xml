@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/returnBtn1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/previous"
+                android:tint="#FFFFFF"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/Maintitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="歌曲列表"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="545dp">
+
+
+            <ListView
+                android:id="@+id/starView"
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/songsView"
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <include layout="@layout/play_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playlistview"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="-500dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#f7f7f7"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="播放列表"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/clearplaylistBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:text="清空" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/playlist"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:elevation="10dp"
+            android:padding="20dp" />
+    </LinearLayout>
+</RelativeLayout>
